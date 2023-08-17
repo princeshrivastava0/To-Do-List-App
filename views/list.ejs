@@ -1,0 +1,65 @@
+<!-- Main EJS Template -->
+
+<!-- Importing Header Template -->
+<%- include ('header') -%>
+
+<!-- Parent Container -->
+  <div class="parentContainer" id="heading">    
+    <!-- Heading Section -->    
+    <h1>
+      <%= listTitle %>
+    </h1>
+    <!-- Blurred Background Div -->
+    <div class="bgdiv"></div>
+<!-- ToDoList Container -->
+    <div class="elemDiv">
+      <!-- Div containing Add Item Input Box + Submit Button -->
+      <div class="inputDiv">
+        <!-- Add Item Form Start -->
+        <form action="/" method="post">
+          <!-- Add Item Input Element -->
+          <input type="text" name="newItem" placeholder="Add Item" autocomplete="off" class="addItem" id="todolist" />
+          <!-- Add Item Submit Button -->
+          <button type="submit" class="d-grip gap-2 btn btn-warning customBtn" name="list" value=<%=listTitle %>
+            ><img src="/images/checkmark.svg" width="80%">
+          </button>
+        
+        </form>
+        <!-- Add Item form End -->
+      </div>
+      <!-- Empty Div for Margin between Add Item and List elements created -->
+      <div class="emptyDiv"></div>
+      <!-- For Loop to create new list elements -->
+      <% for(let i=0; i < newListItems.length; i++){ %>
+        <div class="newDiv">
+          <!-- New list elements form start -->
+          <form action="/delete" method="post" class="form">
+           <!-- Div containing text + delete button -->
+            <div class="childDiv">
+            <div class="textDiv">
+              <!-- Text element of the list -->
+            <p class="text">
+              <%= newListItems[i] %>
+            </p>
+          </div>
+          <!-- Delete button -->
+            <div class="btnDiv">
+            <button type="submit" name="delBtn" class="delBtn d-grip gap-2 btn btn-outline-danger" value=<%= docId[i]
+              %> onClick="this.form.submit()" ><img src="images/delete.png" height="75%" />
+            </button>
+          </div>
+        </div>
+        </div>   
+             <!-- Hidden Input Element to send listName to backend -->
+        <input type="hidden" class="hiddenInput" name="listName" value=<%=listTitle %>>
+        </form>
+<!-- new list elements form end -->
+        <% } %>
+<!-- For Loop End -->
+    </div>
+  </div>
+  </div>
+<!-- Importing Footer Template -->
+  <%- include ('footer') -%>
+
+  <!-- Template End -->

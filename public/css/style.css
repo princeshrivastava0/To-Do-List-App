@@ -1,0 +1,265 @@
+/* Global Settings */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.2rem;    
+}
+
+.parentContainer{
+    height:100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    background: url("/images/to do list.jpg");   
+}
+
+/* Heading */
+h1{
+position: absolute;
+top: 10%;
+color:whitesmoke !important;
+font-size: 3rem !important;
+font-weight: 900;
+}
+
+/* Blurred Background Div */
+.bgdiv{
+    width: 50%;
+    height: 70%;
+    background-color: rgba(36, 194, 173, 0.425);
+    filter: blur(15px);          
+}
+
+/* ToDoList Container */
+.elemDiv{
+    position: absolute;
+    top: 20%;
+    left: auto;
+    height: 65%;
+    width: 40%;
+    display: block;
+    overflow: scroll;
+    overflow-x: hidden;       
+}
+
+/* Div containing Input Box + Submit Button */
+.inputDiv{
+    position: fixed;
+    width: 39.1%;
+    background-image: url("/images/divbackground.jpg");         
+}
+
+/* Add Item Input Element */
+.elemDiv input{
+    height: 50px;
+    width: 85%;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: 600;        
+}
+
+/* Add Item Submit Button */
+.customBtn{
+    height: 50px;
+    width: 10% !important;
+    text-align: center !important;
+    margin-left: 2.5%;
+    margin-bottom: 1%;    
+    border-radius: 50% !important;  
+}
+
+.customBtn:hover{
+    background-color: green !important;
+}
+
+/* Empty Div for Margin between Add Item Input and List Created */
+.emptyDiv{    
+    height: 15% !important;       
+}
+
+/* New List Items Div - Text + Del button*/
+.childDiv{
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between !important;                
+    text-align: center;    
+    margin-top:1% ;         
+}
+
+/* New List Items Paragraph element  */
+.text{
+    height: 100%;
+    width: 60% !important;    
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;    
+    color: rgb(255, 255, 255) !important;    
+    min-width: 31rem;     
+    border-radius: 10px;   
+    border: 1px solid cyan !important;    
+    padding: 1%;
+    overflow-wrap: anywhere !important;     
+}
+
+/* Delete Btn Div */
+.btnDiv{ 
+ min-width: 15% !important;
+ max-width: 15% !important;  
+}
+
+/* Delete Btn Element */
+.delBtn {    
+    min-width: 15% !important;    
+    background: transparent;   
+    height: 62px;    
+    text-align: center;        
+    border: 1px solid cyan !important;
+}
+
+/* Footer */
+.footer{
+    width: 100vw;
+    position: fixed !important;
+    bottom: 5% ;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color:rgb(255, 255, 255);
+    text-align: center !important;    
+}
+
+/* Scrollbar CSS */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  } 
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0, 204, 255); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+
+
+  /* Mobile CSS */
+  @media screen and (max-width: 600px) {
+   /* Global Settings */
+    *{
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    /* Heading */
+    h1{
+        /* position: absolute; */
+        top: 5%;
+    }
+    
+    /* Blurred Background Div */
+     .bgdiv{
+        width: 100%;                   
+    }
+
+    /* ToDoList Container */
+    .elemDiv{
+        /* position: absolute; */
+        top: 15%;
+        width: 90% !important;               
+    } 
+
+    /* Div containing Input Box + Submit Button */
+.inputDiv{
+    width: 87%;      
+}
+
+/* Add Item Input Element */
+.elemDiv input{
+    width: 80%;     
+}
+
+/* Add Item Submit Button */
+    .customBtn{        
+        width: 15% !important;     
+        border-radius:10px !important;  
+        margin-bottom: 2.5% !important; 
+    }
+
+    /* Add Item Submit Button Image */
+    .customBtn img{
+        width: 110%;        
+    }
+
+/* Empty Div for Margin between Add Item Input and List Created */
+.emptyDiv{    
+    height: 10% !important;            
+}
+
+/* New List Items Div - Text + Del button*/
+.childDiv{   
+    margin-top:3% ;   
+    width: 99% !important;        
+}
+    
+/* New List Items Paragraph element  */
+.text{        
+        width: 40% !important;    
+        min-width: 18rem !important;  
+        font-weight: 300; 
+        padding: 2%;               
+       }
+
+    /* Delete Btn Div */
+.btnDiv{ 
+    min-width: 15% !important;
+    max-width: 15% !important;      
+   }
+
+   /* Delete Btn Element */
+    .delBtn{
+        width: 100%;
+        height: 65px;                   
+    }
+
+    /* Delete Btn Image */
+    .delBtn img{
+        width: 100%;        
+    }
+
+    /* Footer */
+    .footer{
+        /* position:fixed */
+        bottom: 3%;
+    }
+
+    /* Large Social Media Icons */
+    .socials-large{
+        display: none !important;
+    }
+
+/* Social Media Logos */
+    .mobile-socials{
+        display: block !important;
+    }
+
+    .parentContainer{
+        background: url("/images/to do list -mobile.jpg");
+     }
+  }
+
+  @media screen and (min-width: 601px) {
+    .mobile-socials{
+        display: none !important;
+    }    
+  }
